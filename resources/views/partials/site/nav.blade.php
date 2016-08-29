@@ -9,7 +9,7 @@
                 <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#">
-                    <img src="{{ URL::asset('assets/img/logo2.png') }}" alt="">
+                    Contact Information
                 </a>
             </div>
 
@@ -17,13 +17,11 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         
               <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Support</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="tickets.html">All Tickets</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="register.html">Register</a></li>
+                @if( Auth::check() )
+                    <li>Welcome, {{ Auth::user()->name }}</li>
+                @endif
+                <li><a href="login">Login</a></li>
+                <li><a href="register">Register</a></li>
               </ul>
             </div><!-- /.navbar-collapse -->
             </nav>

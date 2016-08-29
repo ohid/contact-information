@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Role;
+use App\Models\Contact;
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -25,7 +27,49 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $userCount = User::count(); 
+        
+        if( Auth::check() ) {
+            $user = Auth::user();
+            return view('home', compact('user'));            
+        } else {
+            return view('welcome', compact('userCount'));
+        }
+    }
+
+
+    /**
+     *
+     * Get all friends
+     *
+     */
+    public function allFriends(Contact $contacts)
+    {
+        $user = \Auth::user()->id;
+        $contacts = $contacts->where('user_id', '!=', $user)->paginate(20);
+        return view('all', compact('contacts'));
+    }
+
+
+    /**
+     *
+     * Get single friend profile
+     *
+     */
+    public function singleFriends(User $user, $id)
+    {
+        $user = $user->find($id);
+        if( $user ) {
+            $next = User::where('id', '>', $user->id)->min('id');
+
+            if( $next == null) {
+                $next = User::first();
+            }
+
+            return view('single', compact('user', 'next'));            
+        } else {
+            return redirect('/');
+        }
     }
 
     public function createRoleUser()
@@ -42,15 +86,11 @@ class HomeController extends Controller
         $SuperAdmin->display_name = 'Admin';
         $SuperAdmin->save();
 
-        $staff = new Role;
-        $staff->name = 'staff';
-        $staff->display_name = 'Staff';
-        $staff->save();
+        $user = new Role;
+        $user->name = 'user';
+        $user->display_name = 'user';
+        $user->save();
 
-        $member = new Role;
-        $member->name = 'client';
-        $member->display_name = 'client';
-        $member->save();
 
 
         /**
@@ -61,8 +101,7 @@ class HomeController extends Controller
         $adminRole = Role::where('name', 'admin')->first();
 
         $adminUser = new User;
-        $adminUser->first_name = 'Ohidul';
-        $adminUser->last_name = 'Islam';
+        $adminUser->name = 'Ohidul Islam';
         $adminUser->email = 'ohidul.islam951@gmail.com';
         $adminUser->password = bcrypt('111111');
         $adminUser->save();

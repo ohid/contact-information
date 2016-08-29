@@ -7,7 +7,7 @@
     <div class="row profile">
         <div class="col m8 offset-m2">
 			<div class="row">
-				<div class="col m6 s12">
+				<div class="col m6">
 					<div class="profile-left">
 						<img src="{{ $user->getImage(400) }}" alt="">
 						<h2> {{ $user->name }} 
@@ -53,7 +53,7 @@
 						</table>
 					</div>
 				</div>
-				<div class="col m6 s12">
+				<div class="col m6">
 					<div class="list-info">
 
 						@if( $user->contact )
@@ -110,6 +110,12 @@
 
 					</div>
 				</div>
+			</div>
+
+			<div class="row">
+				<a href="{{ route('single.friend', $next) }}" class="waves-effect waves-light btn link-full-width"> See another friend 
+					<i class="fa fa-angle-double-right "></i> 
+				</a>
 			</div>
         </div>
     </div>

@@ -8,6 +8,7 @@
         "php": ">=5.5.9",
         "laravel/framework": "5.2.*",
         "laravelcollective/html": "5.2.*",
+        "abeautifulsite/simpleimage": "2.6.0",
         "zizaco/entrust": "dev-laravel-5"
     },
     "require-dev": {

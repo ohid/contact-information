@@ -1,43 +1,55 @@
-@extends('layouts.auth')
+@extends('layouts.app')
 
-@section('title', 'Login | Support Pro')
+@section('title', 'Login | Contact Information')
 
 @section('content')
-<p class="title">Login here</p>
+<div class="container">
+    <div class="row">
+        <div class="col s12 m8 offset-m2">
+            
+            <div class="form-wrapper auth-wrapper">
+                <h3>Login</h3>
+                <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
+                    {{ csrf_field() }}
 
-<div class="the-form">
+                    <div class="input-field ">
+                      <input placeholder="Your Email" id="email"  name="email" type="email" class="validate">
+                      <label for="email">Email</label>
 
-    {{ Form::open(['url' => 'login', 'method' => 'post'])}}
-        <div class="form-group">
-            <div class="input-group">
-              <span class="input-group-addon" id="email_addon">
-                  <i class="fa fa-user"></i>
-              </span>
-                {{ Form::email('email', null, ['placeholder' => 'Email', 'class' => 'form-control', 'aria-describedby' => 'email_addon']) }}
+                        @if ($errors->has('email'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('email') }}</strong>
+                            </span>
+                        @endif
+                    </div>
+
+                    <div class="input-field ">
+                      <input placeholder="Your Password" id="password"  name="password" type="password" class="validate ">
+                      <label for="password">Password</label>
+
+                        @if ($errors->has('password'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('password') }}</strong>
+                            </span>
+                        @endif
+                    </div>
+                    <p>
+                        <input type="checkbox" name="remember" id="remember" />
+                        <label for="remember">Remember me</label>
+                    </p>
+
+                    <p>
+                        Don't have an account? <a href="/register">Register here</a>
+                    </p>
+
+                    <button type="submit" class="btn blue darken-1">
+                        <i class="fa fa-btn fa-sign-in"></i> Login
+                    </button>
+
+                </form>
             </div>
-            @if( $errors->any() ) 
-                <span class="help-block"> {{ $errors->first('email') }} </span>
-            @endif
-        </div>
-        <div class="form-group">
-            <div class="input-group">
-                <span class="input-group-addon" id="password_addon">
-                    <i class="fa fa-lock"></i>
-                </span>
-                {{ Form::password('password', ['placeholder' => 'Password', 'class' => 'form-control', 'aria-describedby' => 'password_addon']) }}
-            </div>
-            @if( $errors->any() ) 
-                <span class="help-block"> {{ $errors->first('password') }} </span>
-            @endif
-        </div>
 
-        {{ Form::submit('login', ['class' => 'btn btn-success']) }}
-
-        <div class="help-links">
-            <p><a href="register">Register now</a></p>
-            <p><a href="{{ url('/password/reset') }}">Forget password?</a></p>
         </div>
-    {{ Form::close() }}
+    </div>
 </div>
-
 @endsection

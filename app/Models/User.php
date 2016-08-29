@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Models;
-
+use App\Models\Contact;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Zizaco\Entrust\Traits\EntrustUserTrait;
 
@@ -14,7 +14,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'first_name', 'last_name', 'email', 'password',
+        'name', 'nickname', 'email', 'image', 'password',
     ];
 
     /**
@@ -25,6 +25,63 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+
+
+    /**
+     *
+     * Set Hashed password
+     *
+     */
+    public  function setPasswordAttribute( $value )
+    {
+        $this->attributes['password'] = bcrypt( $value );
+    }
+
+
+    /**
+     *
+     * User has one Contact
+     *
+     */
+    public function contact()
+    {
+        return $this->hasOne(Contact::class);
+    }
+
+
+    
+    /**
+     *
+     * Get the gravatar image of the user
+     *
+     */
+    
+    public function gravatarImage($size)
+    {
+        $email = $this->attributes['email'];
+        $size = $size;
+
+        return $grav_url = "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email ) ) ) . "?d=mm&s=" . $size;
+
+    }
+
+    /**
+     *
+     * Get the profile image
+     *
+     */
+    
+    public function getImage( $size )
+    {
+        $profileImg = $this->attributes['image'];
+
+        if( $profileImg ) {
+            return '/uploads/profile_images/' . $profileImg;
+        } else {
+            return $this->gravatarImage( $size );
+        }
+    }
 
  
 }
