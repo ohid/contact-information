@@ -1,0 +1,903 @@
+body{
+    font-family: 'proxima_nova_regular';
+    margin-bottom: 200px;    
+}
+
+html, body{
+    max-width: 100%;
+}
+
+/* CUSTOM BOOTSTRAP BUTTON STYLES */
+.btn {
+    padding: 14px 21px;
+    font-size: 13px;
+    border-radius: 2px;
+    font-family: 'proxima_nova_bold';
+    text-transform: uppercase;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #00b98b;
+    border-color: #05ab82;
+}
+.btn-success:hover {
+    color: #fff;
+    background-color: #00b98b;
+    border-color: #06a27c;
+}
+.btn-success:focus, .btn-success:active:focus {
+    color: #fff;
+    background-color: #00B98B;
+    border-color: #099a76;
+}
+.btn-info {
+    color: #b5cadc;
+    background-color: #202f3e;
+    border-color: #223140;
+    margin-right: 10px;
+}
+.btn-info:hover {
+    color: #b5cadc;
+    background-color: #2b3e50;
+    border-color: #17212b;
+}
+.btn-info:focus, .btn-info:active:focus {
+    color: #fff;
+    background-color: #223140;
+    border-color: #172029;
+}
+
+.btn{
+    outline: none
+}
+
+/*----------  
+Home Page
+ ----------*/
+
+/* Navigation */
+.navbar-default {
+    background-color: transparent;
+    border: none;
+    margin-bottom: 0px;
+    border-bottom: 1px solid #e8e8e8;
+}
+.navbar{
+    min-height: 100px;
+}
+.navbar-brand {
+    height: 100px;
+    padding: 32px 15px;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #888888;
+    font-size: 15px;
+}
+.navbar-nav > li > a {
+    padding-top: 43px;
+    padding-bottom: 35px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav > li > a:hover{
+    color: #19b5fe;
+
+
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #19b5fe;
+}
+.navbar-default .navbar-toggle {
+    border-color: #19b5fe;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.navbar-default .navbar-toggle:hover .icon-bar,
+.navbar-default .navbar-toggle:focus .icon-bar{
+    background-color: #fff;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #19b5fe;
+}
+
+
+.style2 .navbar-default .navbar-toggle:hover, 
+.style2 .navbar-default .navbar-toggle:focus {
+    background-color: #f4b350;
+}
+.style2 .navbar-default .navbar-toggle {
+    border-color: #f4b350;
+}
+.style2 .navbar-default .navbar-toggle:hover .icon-bar,
+.style2 .navbar-default .navbar-toggle:focus .icon-bar{
+    background-color: #fff;
+}
+.style2 .navbar-default .navbar-toggle .icon-bar {
+    background-color: #f4b350;
+}
+
+.container{
+    padding: 0px 30px;
+}
+
+
+/*----------  Content Area  ----------*/
+.content-area{
+    margin-top: 60px;
+}
+
+
+/* CONTENT */
+.search-pblm{}
+.search-pblm form{
+    position: relative;
+}
+.search-pblm form input[type=text] {
+    background: #f6fbff;
+    border: 1px solid #d4e7f6;
+    box-shadow: none;
+    color: #888888;
+    height: 65px;
+    font-size: 15px;
+    padding: 17px 32px;
+    font-family: 'proxima_nova_regular';
+    border-radius: 3px;
+}
+.search-pblm form input[type=text]::-webkit-input-placeholder{
+    color: #888888;
+}
+.search-pblm form input[type=text]:focus{
+    box-shadow: none;
+}
+.search-pblm form button {
+    position: absolute;
+    right: 25px;
+    top: 21px;
+    border: none;
+    background: none; 
+    color: #cccccd;
+    font-size: 17px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.search-pblm form button:hover{
+    color: #19b5fe
+}
+.search-pblm form button:focus{
+    outline: none;
+}
+
+
+
+/*     HEADING TEXT     */
+.heading-text    {
+    margin-top: 45px;
+}
+.heading-text   h2{
+    font-size: 26px;
+    font-family: 'proxima_novasemibold';
+    color: #222222;
+}
+.heading-text   h2 span{
+    color: #19b5fe;    
+}
+.style2 .heading-text   h2 span{
+    color: #f4b350;    
+}
+.heading-text   p{
+    color: #888888;
+    font-size: 16px;
+}
+
+
+/*     TICKET FORM    */
+.ticket-form{
+    margin-top: 35px;
+}
+.submit-ticket{
+    padding-right: 20px;
+}
+.ticket-form form{}
+.ticket-form form .form-group{
+    margin-bottom: 30px;
+}
+.ticket-form form .form-control{
+    border: 1px solid #d9d9d9;
+    box-shadow: none;
+    color: #888888;
+    height: 60px;
+    font-size: 15px;
+    padding: 17px 32px;
+    font-family: 'proxima_nova_regular';
+    border-radius: 3px;
+}
+.ticket-form form .form-control:focus{
+    border: 1px solid #19B5FE
+}
+.style2 .ticket-form form .form-control:focus{
+    border: 1px solid #f4b350
+}
+.ticket-form form textarea.form-control{
+    height: 200px;
+}
+.ticket-form form .btn-submit {
+    background: #19b5fe;
+    color: #fff;
+    font-family: 'proxima_nova_bold';
+    font-size: 16px;
+    padding: 21px 40px;
+}
+
+.style2 .ticket-form form .btn-submit {
+    background: #f4b350;
+}
+
+
+/*     COMMON ANSWERS    */
+.common-answers .panel-group{
+    margin-top: 35px;
+}
+.common-answers .panel-heading:first-child{
+    padding-top: 0px;
+}
+.common-answers .panel-default {
+    position: relative;
+
+}
+.common-answers .panel-default > .panel-heading {
+    color: #222222;
+    background-color: transparent;
+    border: none;
+    border-bottom: 0px solid  #eaeaea;
+    font-size: 16px;
+    font-family: 'proxima_novasemibold';
+    margin-left: 20px;
+}
+.common-answers .panel-default > .panel-heading i{
+    margin-right: 20px;
+    font-weight: bold;
+    position: absolute;
+    left: 0px;
+}
+
+.panel {
+    margin-bottom: 20px;
+    border: none;
+    background-color: #fff;
+    border-bottom: 0px solid transparent; 
+    border-radius: 4px;
+    -webkit-box-shadow: none; 
+    box-shadow: none; 
+}
+.panel-group .panel:first-child{
+    padding-top: 0px;
+}
+.panel-group .panel {
+    margin-bottom: 0;
+    border-radius: 0px;
+    border-bottom: 1px solid #ddd;
+    padding: 9px 0px;
+    padding-bottom: 12px;
+}
+.panel-group .panel-body{
+    padding-bottom: 5px;
+    padding-top: 0px;
+}
+.panel-title {
+    line-height: 20px;
+}
+.panel-title.collapsed i {
+    transform: rotate(0deg);    
+}
+.panel-title i{
+    transform: rotate(90deg);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.panel-group .panel-heading + .panel-collapse > .panel-body, .panel-group .panel-heading + .panel-collapse > .list-group {
+    border-top: none;
+    margin-left: 20px;
+    color: #848383;
+    line-height: 23px;
+}
+
+/*----------  
+TICKETS PAGE 
+ ----------*/
+
+.title-text h3 {
+    margin-top: 0px;
+    color: #8198ac;
+    font-family: 'proxima_nova_bold';
+    font-size: 18px;
+    margin-bottom: 15px;
+    margin-left: 25px;
+}
+
+.all-tickets-area{
+}
+
+.ticket-big-box .table thead tr,
+.staffs-p .table thead tr{
+    background: #f4f9ff
+}
+.ticket-big-box .table thead tr th,
+.staffs-p .table thead tr th {
+    color: #8198ac;
+    padding: 14px 28px;
+    text-transform: uppercase;
+    border-bottom: none;
+    white-space: nowrap;
+    border-right: 1px solid #f3f6f9;
+    font-size: 13px
+}
+.table-hover > tbody > tr:hover {
+    background: #f4f9ff
+}
+.ticket-big-box .table tbody tr td ,
+.staffs-p .table tbody tr td {
+    color: #8198ac;
+    padding: 17px 33px;
+    border-bottom: 1px solid #f3f6f9;
+    border-right: 1px solid #f3f6f9;
+    border-top: none;
+    white-space: nowrap;
+    font-family: 'proxima_nova_regular';
+    font-size: 14px;
+}
+.ticket-big-box .table tbody tr td a,
+.staffs-p .table tbody tr td a {
+    color: #8198ac;
+}
+
+span.status-new{
+    color: #258df4;
+}
+ span.status-pending{
+    color: #ff474c;
+}
+ span.status-solved{
+    color: #00b98b;
+}
+
+
+
+
+/*----------  
+AUTH PAGE 
+ ----------*/
+
+.auth-page {
+    background: #192530;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.form-outer{
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+.inner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.auth-form-area {
+    position: relative;
+    display: inline-block;
+    width: 550px;
+    padding: 80px;
+    background: #1a2733;
+    border: 1px solid #202f3b;
+    color: white;
+    border-radius: 3px;
+}
+
+
+.auth-form-area .logo img{
+    width: 180px;
+}
+
+
+.auth-form-area .form-control {
+    display: block;
+    width: 100%;
+    height: 58px;
+    padding: 6px 20px;
+    font-size: 14px;
+    color: #667c8e;
+    background-color: #1c2a36;
+    background-image: none;
+    border: 1px solid #233545;
+    border-left: 0px solid transparent;
+    border-radius: 0px 4px 4px 0px;
+}
+
+.auth-form-area .register-form .form-control  {
+    border-left: 1px solid #233545;
+    border-radius: 4px;
+}
+
+.auth-form-area .input-group-addon {
+    padding: 6px 10px 2px 25px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1;
+    color: #667c8e;
+    text-align: center;
+    background-color: #1c2a36;
+    border-right: 0px solid transparent;
+    border-left: 1px solid #233545;
+    border-top: 1px solid #233545;
+    border-bottom: 1px solid #233545;
+    border-radius: 4px 0px 0px 4px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.auth-form-area .form-control:focus {
+    border-color: none;
+     outline: 0; 
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.auth-form-area input::-webkit-input-placeholder {
+    color: #667c8e;
+}
+.auth-form-area  .logo{
+    margin-bottom: 40px;
+}
+.auth-form-area .title{
+    font-size: 16px;
+    color: #667c8e;
+    font-family: 'proxima_nova_bold';
+    text-transform: uppercase;
+}
+
+.auth-form-area .the-form{
+    margin-top: 25px;
+}
+
+.auth-form-area .form-group{
+    margin-bottom: 20px;
+}
+.auth-form-area .the-form input[type=submit]{
+    padding: 14px 50px;
+    font-size: 15px;
+    font-family: 'proxima_nova_bold';
+    background: #26c281;
+}
+
+.auth-form-area .the-form button:focus{
+    background:#1fae72;
+    outline: none; 
+}
+
+.auth-form-area .the-form .help-links {
+    margin-top: 30px;
+}
+.auth-form-area .the-form .help-links p{
+
+}
+.auth-form-area .the-form .help-links p a{
+    color: #667c8e;
+
+}
+
+
+
+
+/*      CUSTOM INPUT SELECTOR       */
+
+.js .ticket-submit-file .inputfile
+ {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.ticket-submit-file .inputfile + label {
+    max-width: 90%;
+    font-size: 15px;
+    font-family: 'proxima_nova_light';
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 28px 20px 30px 33px;
+    border-radius: 3px;
+    position: absolute;
+    left: 15px;
+    top: 0px;
+    background: #f9f9f9;
+    color: #bebebe;
+    height: 77px;
+    width: 100%;
+    border: 1px solid #d9d9d9;
+}
+
+.style2 .ticket-submit-file .inputfile + label{
+    max-width: 100%;
+}
+
+.style2 .google-recaptcha-init{
+    padding-left: 50px;
+}
+.ticket-submit-file .inputfile + label span.browse{
+    color: #19b5fe;
+    text-decoration: underline;
+}
+.style2 .ticket-submit-file .inputfile + label span.browse{
+    color: #f4b350;
+}
+
+.no-js .ticket-submit-file .inputfile.replyfile + label {
+    display: none;
+}
+
+.ticket-submit-file .inputfile:focus + label,
+.ticket-submit-file .inputfile.has-focus + label{
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+.ticket-submit-file .inputfile + label svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-top: -0.25em;
+    margin-right: 0.25em;
+    margin-right: 20px;
+}
+
+
+
+.ticket-submit-file .inputfile-1 + label {
+    color: #8198ac;
+    background-color: #202f3e;
+}
+
+.ticket-submit-file .inputfile-1:focus + label,
+.ticket-submit-file .inputfile-1.has-focus + label,
+.ticket-submit-file .inputfile-1 + label:hover {
+    background-color: #202f3e;
+}
+
+@media screen and (max-width: 50em) {
+    .ticket-submit-file .inputfile-6 + label strong {
+        display: block;
+
+    }
+
+
+}
+
+
+
+
+/*=============================================
+=            Single ticket page               =
+=============================================*/
+
+.ticket-single-page{
+    margin-top: 15px;
+}
+.all-user-ticket-box{
+    padding-top: 20px;
+    margin-top: 15px;
+}
+.ticket-box .table{
+    margin-bottom: 0px;
+}
+.ticket-box{
+    box-shadow: 0px 0px 6px rgba(0,0,0,0.13);
+    background: #fff;
+}
+
+.ticket-header {
+    height: 60px;
+    padding: 25px 30px;
+}
+.ticket-header h4{
+    color: #8198ac;
+    margin: 0px;
+    font-family: 'proxima_nova_bold';
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.ticket-title {
+    background: #f4f9ff;
+    padding: 18px 15px 7px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+.ticket-title h3 {
+    font-size: 18px;
+    font-family: 'proxima_novasemibold';
+    color: #849bb3;
+    margin: 0px;
+}
+
+.t-t-d{
+    text-align: right;
+    color: #afc4d8;
+    font-size: 12px
+}
+
+.ticket-detail{
+    padding:15px 30px;
+}
+.ticket-detail p {
+    color: #849bb3;
+    line-height: 28px;
+    font-size: 15px;
+}
+
+.file-attached{
+    background: url('img/bg-at.png') repeat-x;
+    height: 45px;
+    border: 1px solid #eaf1f6;
+    border-radius: 5px
+}
+.file-single{
+    height: inherit;
+}
+.file-t {
+    width: 110px;
+    margin-right: 15px;
+    float: left;
+    height: inherit;
+    padding: 13px 0px 13px 20px;
+}
+.file-t span{
+    font-size: 12px;
+    color: #92a8be;
+}
+.file-name {
+    padding: 12px 30px 12px 0px;
+    float: left;
+}
+.file-name span a{
+    color: #698097;
+    font-size: 15px;
+}
+
+.ticket-replies {
+    border-top: 1px solid #eff3f8;
+    margin-top: 25px;
+}
+
+.reply-form{
+    padding: 30px 30px;
+}
+.reply-form label {
+    font-size: 13px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-family: 'proxima_nova_bold';
+    color: #8198ac;
+}
+.reply-form textarea#reply-textarea{
+    height: 120px;
+    resize: none;
+    border: 1px solid #e6ecf2;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+
+.reply-form textarea#reply-textarea:focus {
+    border-color: #202F3E;
+    outline: 0;
+     -webkit-box-shadow: none; 
+     box-shadow: none; 
+}
+
+.reply-form  .form-group{
+    position: relative;
+}
+#reply-attach-file {
+    color: transparent;
+    width: 120px;
+    right: 2px;
+    top: 107px;
+}
+#reply-attach-file::-webkit-file-upload-button {
+  visibility: hidden;
+}
+#reply-attach-file:focus{
+    outline: none;
+}
+#reply-attach-file::before {
+    content: 'Attach file';
+    display: inline-block;
+    background: #202f3e;
+    border-radius: 3px;
+    padding: 13px 20px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 12px;
+    color: #8198ac;
+    text-transform: uppercase;
+}
+#reply-attach-file:focus:before {
+    outline: none;
+}
+#reply-attach-file:hover::before {
+  border-color: black;
+}
+#reply-attach-file:active {
+  outline: 0;
+}
+#reply-attach-file:active::before {
+  background: #203141; 
+}
+
+
+
+
+.js .inputfile,
+.js .inputfile.replyfile
+ {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile + label,
+.inputfile.replyfile + label {
+    max-width: 80%;
+    font-size: 11px;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.625rem 1.25rem;
+    padding: 15px 17px;
+    border-radius: 3px;
+    position: absolute;
+    right: 4px;
+    top: 106px;
+}
+
+.no-js .inputfile.replyfile + label,
+.no-js .inputfile + label {
+    display: none;
+}
+
+.inputfile:focus + label,
+.inputfile.has-focus + label,
+.inputfile.replyfile:focus + label,
+.inputfile.replyfile.has-focus + label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+.inputfile + label svg ,
+.inputfile.replyfile + label svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-top: -0.25em;
+    /* 4px */
+    margin-right: 0.25em;
+    /* 4px */
+}
+
+
+
+.inputfile-1 + label {
+    color: #8198ac;
+    background-color: #202f3e;
+}
+
+.inputfile-1:focus + label,
+.inputfile-1.has-focus + label,
+.inputfile-1 + label:hover {
+    background-color: #202f3e;
+}
+
+@media screen and (max-width: 50em) {
+    .inputfile-6 + label strong {
+        display: block;
+    }
+}
+
+.all-replies{
+    padding: 30px 30px 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.all-replies .row{
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.single-reply{
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.single-reply:last-child{
+    margin-bottom: 30px;
+}
+
+.single-reply:after {
+    position: absolute;
+    bottom: -28px;
+    left: -31px;
+    background: #eff3f8;
+    height: 1px;
+    width: 107%;
+    content: '';
+}
+
+.single-reply .media-left, 
+.single-reply .media > .pull-left {
+    padding-right: 20px;
+}
+
+
+.reply-user-img img:focus{
+    outline: none;
+}
+.reply-user-details{}
+.reply-user-details h4{
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-family: 'proxima_nova_bold';
+}
+.reply-user-details h4 a {
+    color: #202f3e;
+    font-size: 19px;
+}
+.reply-user-details h4 a:focus{
+    outline: none;
+}
+.reply-user-details p.user-role{
+    color: #8198ac;
+    font-size: 13px;
+}
+.reply-user-details p.reply-date{
+    color: #8198ac;
+    font-size: 14px;
+}
+
+.reply-box-right{
+}
+.reply-message {
+    margin-top: 20px;
+}
+.reply-message p {
+    color: #8198ac;
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 400;
+}
+
+
