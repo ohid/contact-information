@@ -43,11 +43,11 @@ class HomeController extends Controller
      * Get all friends
      *
      */
-    public function allFriends(Contact $contacts)
+    public function allFriends(User $users)
     {
         $user = \Auth::user()->id;
-        $contacts = $contacts->where('user_id', '!=', $user)->paginate(20);
-        return view('all', compact('contacts'));
+        $users = $users->orderBy('created_at', 'ASC')->where('id', '!=', $user)->paginate(20);
+        return view('all', compact('users'));
     }
 
 

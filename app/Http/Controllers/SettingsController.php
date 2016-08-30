@@ -57,11 +57,27 @@ class SettingsController extends Controller
 
         $name = time() . str_random(10) . '.' . $file->guessClientExtension();
 
-        $file->move( public_path('uploads/profile_images'), $name );
+        try {
+            $simpleImage = new SimpleImage();
+            $simpleImage->load($file)->best_fit(500, 600)->save('uploads/profile_images/' . $name);
+
+            // Check if the user already has a profile picture
+            // Then Delete it first
+            $existingImage = Auth::user()->image;
+            if($existingImage){
+                if( file_exists( public_path('uploads/profile_images/' . $existingImage) ) ) {
+                    unlink( public_path('uploads/profile_images/' . $existingImage) );
+                }
+            }
+
+            Auth::user()->fill([
+                'image' => $name
+            ])->save();
 
 
-        Auth::user()->fill([
-            'image' => $name
-        ])->save();
+        } catch (Exception $e) {
+            return redirect()->back()->with('message', 'Failed to update image.');
+        }
+
     }
 }

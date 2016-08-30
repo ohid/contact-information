@@ -27,6 +27,7 @@ class SaveSettingsRequest extends Request
             'name'  => 'required',
             'nickname'  => 'required',
             'email'  => 'required|unique:users,email,'. \Auth::user()->id,
+            'file'   => 'max:8072'
         ];
     }
 }

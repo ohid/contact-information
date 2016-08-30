@@ -89,6 +89,18 @@
 
     <div class="app-wrapper">
         @yield('content')
+
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12">
+                        <p>
+                            Developed by <a href="http://ohidul.com">Ohidul</a>  | All Rights Reserved
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
